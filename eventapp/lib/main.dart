@@ -16,7 +16,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: TextTheme(
           headline: HeadlineTextStyle,
-
+          title: TitleTextStyle,
+          subtitle: SubTitleTextStyle,
+          display1: UpcomingEventsTextStyle,
+          display2: UpcomingEventsListTextStyle,
+          body1: EventCardTextStyle,
         )
         // This is the theme of your application.
         //
