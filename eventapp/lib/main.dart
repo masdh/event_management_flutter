@@ -21,6 +21,9 @@ class MyApp extends StatelessWidget {
           display1: UpcomingEventsTextStyle,
           display2: UpcomingEventsListTextStyle,
           body1: EventCardTextStyle,
+          display3: DegreeTextStyle,
+          display4: DegreeSmallTextStyle,
+          overline: LocationInfoTextStyle,
         )
         // This is the theme of your application.
         //
