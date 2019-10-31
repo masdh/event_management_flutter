@@ -25,16 +25,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    Icon(
-                      Icons.add_alert,
-                      color: pureBlack,
-                      size: 24.0,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 1.0),
+                      child: Image.asset(
+                        'assets/icons/menu-dotted3.png',
+                        width: 16.0,
+                        fit: BoxFit.fill,
+                      ),
                     ),
                     Text('Home', style: Theme.of(context).textTheme.headline, ),
-                    Icon(
-                      Icons.add_alert,
-                      color: pureBlack,
-                      size: 24.0,
+                    Image.asset(
+                      'assets/icons/notification.png',
+                      width: 20.0,
+                      fit: BoxFit.fill,
                     ),
                   ],
                 ),
@@ -186,7 +189,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           image: DecorationImage(
                             image: AssetImage('assets/img/facetime.png'),
                             fit: BoxFit.cover,
-                            colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.darken)
+                            colorFilter: ColorFilter.mode(pureBlack.withOpacity(0.4), BlendMode.darken)
                           )
                         ),
                         child: Padding(
@@ -223,7 +226,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           image: DecorationImage(
                             image: AssetImage('assets/img/bandmembers.png'),
                             fit: BoxFit.cover,
-                            colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.darken)
+                            colorFilter: ColorFilter.mode(pureBlack.withOpacity(0.4), BlendMode.darken)
                           )
                         ),
                         child: Padding(
@@ -267,9 +270,13 @@ class _HomeScreenState extends State<HomeScreen> {
                           height: 110.0,
                           width: 170.0,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(24.0),
-                            color: pureBlack,
-                          ),
+                          borderRadius: BorderRadius.circular(24.0),
+                          image: DecorationImage(
+                            image: AssetImage('assets/img/map2.png'),
+                            fit: BoxFit.cover,
+                            colorFilter: ColorFilter.mode(pureBlack.withOpacity(0.75), BlendMode.darken),
+                          )
+                        ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -284,39 +291,62 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: 170.0,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(24.0),
-                            color: pureBlack,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomLeft,
+                              end: Alignment.topRight,
+                              stops: [
+                                0.0,
+                                0.2,
+                                0.8,
+                              ],
+                              colors: [pureBlack.withOpacity(0.7), pureBlack.withOpacity(0.8), pureBlack.withOpacity(0.9)]
+                            )
                           ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
+                          child: Stack(
+                            alignment: AlignmentDirectional.topEnd,
                             children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(0.0, 15.0, 15.0, 0.0),
-                                child: Image.asset(
-                                  'assets/icons/moon-white4.png',
-                                  width: 20.0,
-                                  fit: BoxFit.fill,
+                              Container(
+                                width: 50.0,
+                                height: 50.0,
+                                decoration: BoxDecoration(
+                                  color: lightGrey.withOpacity(0.10),
+                                  borderRadius: BorderRadius.circular(50.0),
                                 ),
                               ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Padding(
-                                    padding: const EdgeInsets.fromLTRB(14.0, 10.0, 0.0, 0.0),
-                                    child: Row(
+                              Container(
+                                width: 60.0,
+                                height: 60.0,
+                                decoration: BoxDecoration(
+                                  color: lightGrey.withOpacity(0.10),
+                                  borderRadius: BorderRadius.circular(50.0),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                  child: Image.asset(
+                                    'assets/icons/moon-white4.png',
+                                    width: 16.0,
+                                    fit: BoxFit.fill,
+                                  ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(14.0, 0.0, 0.0, 20.0),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Row(
                                       children: <Widget>[
                                         Text('14', style: Theme.of(context).textTheme.display4,),
                                         Text('\u00b0', style: Theme.of(context).textTheme.display4,),
                                       ],
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.fromLTRB(14.0, 0.0, 0.0, 0.0),
-                                    child: Text("Copenhagen, Denmark", style: Theme.of(context).textTheme.overline,),
-                                  ),
-                                ],
+                                    Text("Copenhagen, Denmark", style: Theme.of(context).textTheme.overline,),
+                                  ],
+                                )
                               )
                             ],
-                          ),
+                          )
                         ),
                       ],
                     ),

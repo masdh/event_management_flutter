@@ -17,3 +17,4 @@ Flutter Widget in use:
 - BoxDecoration
 - Image.asset
 - DecorationImage
+- BorderRadius
