@@ -24,6 +24,8 @@ class MyApp extends StatelessWidget {
           display3: DegreeTextStyle,
           display4: DegreeSmallTextStyle,
           overline: LocationInfoTextStyle,
+          body2: LocationDateTextStyle,
+          subhead: LocationCountryTextStyle,
         )
         // This is the theme of your application.
         //

@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text('Hey, Imram!', style: Theme.of(context).textTheme.title,),
+                      Text('Hey, Mathias!', style: Theme.of(context).textTheme.title,),
                       SizedBox(height: 12.0,),
                       Text("Don't forget to visit your nearest events that you have subscribed at this week.", style: Theme.of(context).textTheme.subtitle,),
                     ],
@@ -183,20 +183,35 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 260.0,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(24.0),
-                          color: lightGrey,
+                          image: DecorationImage(
+                            image: AssetImage('assets/img/facetime.png'),
+                            fit: BoxFit.cover,
+                            colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.darken)
+                          )
                         ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            Icon(
-                              Icons.add_alert,
-                              color: pureBlack,
-                              size: 50.0,
-                            ),
-                            //SizedBox(height: 12.0,),
-                            Text('Another Event')
-                          ],
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(24.0, 0.0, 0.0, 10.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.calendar_today,
+                                    color: pureWhite,
+                                    size: 10.0,
+                                  ),
+                                  SizedBox(width: 4.0,),
+                                  Text('October 14, 2019', style: Theme.of(context).textTheme.body2,)
+                                ],
+                              ),
+                              SizedBox(height: 8.0,),
+                              Text('Dribbble meatup Denmark', style: Theme.of(context).textTheme.subhead,),
+                              SizedBox(height: 4.0,),
+                            ],
+                          ),
                         ),
                       ),
                       SizedBox(width: 18.0,),
@@ -205,20 +220,35 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 250.0,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(24.0),
-                          color: lightGrey,
+                          image: DecorationImage(
+                            image: AssetImage('assets/img/bandmembers.png'),
+                            fit: BoxFit.cover,
+                            colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.darken)
+                          )
                         ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            Icon(
-                              Icons.add_alert,
-                              color: pureBlack,
-                              size: 50.0,
-                            ),
-                            //SizedBox(height: 12.0,),
-                            Text('Another Event')
-                          ],
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(24.0, 0.0, 0.0, 10.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.calendar_today,
+                                    color: pureWhite,
+                                    size: 10.0,
+                                  ),
+                                  SizedBox(width: 4.0,),
+                                  Text('October 14, 2019', style: Theme.of(context).textTheme.body2,)
+                                ],
+                              ),
+                              SizedBox(height: 8.0,),
+                              Text('Dribbble meatup Denmark', style: Theme.of(context).textTheme.subhead,),
+                              SizedBox(height: 4.0,),
+                            ],
+                          ),
                         ),
                       ),
                     ],
@@ -259,26 +289,29 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: <Widget>[
-                              Icon(
-                                Icons.add_alert,
-                                color: pureWhite,
-                                size: 20.0,
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(0.0, 15.0, 15.0, 0.0),
+                                child: Image.asset(
+                                  'assets/icons/moon-white4.png',
+                                  width: 20.0,
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Padding(
-                                    padding: const EdgeInsets.fromLTRB(14.0, 20.0, 0.0, 0.0),
+                                    padding: const EdgeInsets.fromLTRB(14.0, 10.0, 0.0, 0.0),
                                     child: Row(
                                       children: <Widget>[
-                                        Text('23', style: Theme.of(context).textTheme.display4,),
+                                        Text('14', style: Theme.of(context).textTheme.display4,),
                                         Text('\u00b0', style: Theme.of(context).textTheme.display4,),
                                       ],
                                     ),
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.fromLTRB(14.0, 0.0, 0.0, 0.0),
-                                    child: Text("Dhaka, Bangladesh", style: Theme.of(context).textTheme.overline,),
+                                    child: Text("Copenhagen, Denmark", style: Theme.of(context).textTheme.overline,),
                                   ),
                                 ],
                               )

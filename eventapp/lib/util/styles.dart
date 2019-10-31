@@ -11,7 +11,6 @@ const GreetingInfoTextSize = 13.0;
 // Events
 const CardCurrentTextSize = 14.0;
 const UpcomingTextSize = 18.0;
-const UpcomingNoTextSize = 16.0;
 
 // Degree Style
 const DegreeTextSize = 60.0;
@@ -65,7 +64,7 @@ const UpcomingEventsTextStyle = TextStyle(
 const UpcomingEventsListTextStyle = TextStyle(
   fontFamily: FontNameSecondary,
   fontWeight: FontWeight.w600,
-  fontSize: UpcomingNoTextSize,
+  fontSize: HeaderTextSize,
   color: pureBlack,
 );
 
@@ -86,11 +85,29 @@ const DegreeSmallTextStyle = TextStyle(
 );
 
 // Location
+const LocationDateTextStyle = TextStyle(
+  fontFamily: FontNameSecondary,
+  fontWeight: FontWeight.w300,
+  fontSize: LocationTextSize,
+  color: pureWhite,
+  letterSpacing: .1,
+  height: 1.3
+);
+
 const LocationInfoTextStyle = TextStyle(
   fontFamily: FontNameSecondary,
   fontWeight: FontWeight.w400,
   fontSize: LocationTextSize,
   color: darkGrey,
+  letterSpacing: .1,
+  height: .8
+);
+
+const LocationCountryTextStyle = TextStyle(
+  fontFamily: FontNameSecondary,
+  fontWeight: FontWeight.w500,
+  fontSize: GreetingInfoTextSize,
+  color: pureWhite,
   letterSpacing: .1,
   height: .8
 );
