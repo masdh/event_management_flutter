@@ -18,3 +18,4 @@ Flutter Widget in use:
 - Image.asset
 - DecorationImage
 - BorderRadius
+- Positioned

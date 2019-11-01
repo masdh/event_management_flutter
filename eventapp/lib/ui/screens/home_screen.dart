@@ -299,26 +299,34 @@ class _HomeScreenState extends State<HomeScreen> {
                                 0.2,
                                 0.8,
                               ],
-                              colors: [pureBlack.withOpacity(0.7), pureBlack.withOpacity(0.8), pureBlack.withOpacity(0.9)]
+                              colors: [pureBlack.withOpacity(0.7), pureBlack.withOpacity(0.86), pureBlack.withOpacity(0.9)]
                             )
                           ),
                           child: Stack(
                             alignment: AlignmentDirectional.topEnd,
                             children: <Widget>[
-                              Container(
-                                width: 50.0,
-                                height: 50.0,
-                                decoration: BoxDecoration(
-                                  color: lightGrey.withOpacity(0.10),
-                                  borderRadius: BorderRadius.circular(50.0),
+                              Positioned(
+                                top: -6.0,
+                                right: -6.0,
+                                child: Container(
+                                  width: 55.0,
+                                  height: 55.0,
+                                  decoration: BoxDecoration(
+                                    color: lightGrey.withOpacity(0.05),
+                                    borderRadius: BorderRadius.circular(50.0),
+                                  ),
                                 ),
                               ),
-                              Container(
-                                width: 60.0,
-                                height: 60.0,
-                                decoration: BoxDecoration(
-                                  color: lightGrey.withOpacity(0.10),
-                                  borderRadius: BorderRadius.circular(50.0),
+                              Positioned(
+                                top: -15.0,
+                                right: -15.0,
+                                child: Container(
+                                  width: 75.0,
+                                  height: 75.0,
+                                  decoration: BoxDecoration(
+                                    color: lightGrey.withOpacity(0.06),
+                                    borderRadius: BorderRadius.circular(50.0),
+                                  ),
                                 ),
                               ),
                               Padding(
