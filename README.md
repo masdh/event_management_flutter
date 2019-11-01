@@ -20,8 +20,7 @@ I myself use Windows, and with that, I for the moment can only emulate Flutter f
 The Event Management Application is developed with the following design in mind, where Imran Hossen kindly provided the needed fonts.
 https://dribbble.com/shots/7566481-Event-Management-App
 
-<img src="./img/Event_Management_App.png" height="320" width="180">
-<img src="./img/Event_Management_App_Spec.png" height="320" width="180">
+<img src="./img/Event_Management_App.png" height="320" width="180"><img src="./img/Event_Management_App_Spec.png" height="320" width="180">
 
 The application was developed on a Pixel 2, with API 28. It was not developed to be responsive and therefore most likely will look differently on other devices, and cause overflow. The result is showcased below.
 
