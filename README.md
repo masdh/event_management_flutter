@@ -1,4 +1,4 @@
-# Event Management App
+# Event Management App 📅
 
 This is just a minor mobile application built in Flutter with the purpose to re-learn Flutter and all the widgets it provides 🔥.
 
