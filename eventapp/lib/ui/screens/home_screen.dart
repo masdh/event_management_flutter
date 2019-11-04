@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import "package:charcode/charcode.dart";
 
 import '../../util/colors.dart';
 
